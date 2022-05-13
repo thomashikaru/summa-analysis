@@ -92,6 +92,7 @@ def analyze():
     )
     df.to_csv("sentences.csv", index=False)
     fig = px.scatter(df, x="x", y="y", hover_data=["sentence_wrap"])
+    fig.write_image("img/sentences.png")
     fig.show()
 
 
